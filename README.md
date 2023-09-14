@@ -1,5 +1,6 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
-
+# Theta Video API Demo
+In this demo we will show how you can use the [Theta Video API]() to upload and transact videos in the decentralized 
+Theta Network.
 ## Getting Started
 
 First, run the development server:
