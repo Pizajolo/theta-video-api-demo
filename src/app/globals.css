@@ -3,19 +3,13 @@
     'Roboto Mono', 'Oxygen Mono', 'Ubuntu Monospace', 'Source Code Pro',
     'Fira Mono', 'Droid Sans Mono', 'Courier New', monospace;
   --background: #0c0f1a;
-  /*--secondary-color:  #56b492;*/
-  /*--secondary-color: #5ec6a0;*/
-  --secondary-color: #44c294;
-  --secondary-text-color: #595c75;
+  --primary-color: #595c75;
+  --secondary-color-dark: #1a1d28;
+  --secondary-color-green: #44c294;
 }
 
 body {
   background: var(--background);
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
 }
 
 @media (prefers-color-scheme: dark) {

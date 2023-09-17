@@ -15,7 +15,7 @@ export default function Home() {
                 <h2>Demo App</h2>
                 <div/>
             </nav>
-            <div style={{ borderTop: '1px solid #595c75', width: '100%' }}></div>
+            <div style={{ borderTop: '1px solid var(--primary-color)', width: '100%' }}></div>
             <Video></Video>
         </main>
     );
