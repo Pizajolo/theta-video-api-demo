@@ -116,7 +116,7 @@ export default function Video() {
                     'x-tva-sa-secret': apiKeys.secret
                 }
             });
-            return response.data.body.uploads[0]; // Assuming the signed URL is the direct response body
+            return response.data.body.uploads[0];
         } catch (error) {
             console.error('Error fetching signed URL:', error);
         }
@@ -135,7 +135,7 @@ export default function Video() {
                     return;
                 }
 
-                const response = await axios.put(signedURL, videoFile, {
+                await axios.put(signedURL, videoFile, {
                     headers: {
                         'Content-Type': 'application/octet-stream',
                     }
