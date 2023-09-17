@@ -147,72 +147,7 @@ export default function Video() {
             }
         }
     }
-
-    // const transcodeVideo = async (id : string | null) => {
-    //     // create transcode body
-    //     let data: any = {
-    //         "playback_policy":"public",
-    //         "resolutions": selectedResolutions,
-    //     }
-    //     if(id) {
-    //         console.log("Transcode via upload id")
-    //         data["source_upload_id"] = id
-    //     } else {
-    //         console.log("Transcode via external URL")
-    //         data["source_uri"] = videoURL
-    //     }
-    //     let drmRules: any[] = []
-    //     for(let collection of collections) {
-    //         if(ethers.isAddress(collection.address) && collection.network) {
-    //             const network = networks.find(net => net.name === collection.network);
-    //             const chainId = network ? network.value : null;
-    //             if (!drmRules.some(rule => rule.chain_id === chainId && rule.nft_collection === collection.address)) {
-    //                 drmRules.push({
-    //                     "chain_id": chainId,
-    //                     "nft_collection": collection.address
-    //                 });
-    //             }
-    //         }
-    //     }
-    //     if(drmRules.length) {
-    //         data["use_drm"] = true
-    //         data["drm_rules"] = drmRules
-    //     } else {
-    //         data["use_drm"] = false
-    //     }
-    //     if(videoName != '' || videoDescription != '') {
-    //         let metadata: any = {}
-    //         if(videoName != '') {
-    //             metadata["name"] = videoName
-    //         }
-    //         if(videoDescription != '') {
-    //             metadata["description"] = videoDescription
-    //         }
-    //         data["metadata"] = metadata
-    //     }
-    //     // send transcode request
-    //     try {
-    //         console.log(data)
-    //         const response = await axios.post('https://api.thetavideoapi.com/video', JSON.stringify(data), {
-    //             headers: {
-    //                 'x-tva-sa-id': apiKeys.key,
-    //                 'x-tva-sa-secret': apiKeys.secret,
-    //                 'Content-Type': 'application/json'
-    //             }
-    //         });
-    //         console.log(response.data.body);
-    //         setTranscodingId(response.data.body.videos[0].id);
-    //         setIsUploading(false);
-    //     } catch (error) {
-    //         setTranscodingId('')
-    //         if(videoURL)  {
-    //             setErrorMessage('Invalid video URL. Please fix and then try again.')
-    //         } else {
-    //             setErrorMessage('Error starting Video transcoding')
-    //         }
-    //         console.error('Error fetching transcoding Video:', error);
-    //     }
-    // }
+    
     const createTranscodeData = (id: string | null): any => {
         const baseData = {
             playback_policy: "public",
